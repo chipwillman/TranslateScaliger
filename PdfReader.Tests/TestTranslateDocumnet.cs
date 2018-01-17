@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using Google.Cloud.Translation.V2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PageExtractor;
 using TikaOnDotNet.TextExtraction;
 
 namespace PdfReader.Tests
@@ -10,6 +12,31 @@ namespace PdfReader.Tests
     [TestClass]
     public class TestTranslateDocumnet
     {
+        [TestMethod]
+        public void TestExtractTextAndWash()
+        {
+            var pageNumber = 14;
+            for (int i = pageNumber; i < 970; i++)
+            {
+                var sourcePath = @"c:\code\PdfTranslator\Solution1\PageExtractor.Tests\bin\Debug\Extracted\";
+                var pdfFilename = "Page" + i + "_Iosephi_Scaligeri_Opus_de_emendatione_te.pdf";
+                var outFilename = "Page" + i.ToString("00#") + "_cleanedText_Iosephi_Scaligeri_Opus_de_emendatione_te.txt";
+                var outDirectory = @"c:\code\PdfTranslator\Solution1\Output\Latin";
+                var te = new TextExtractor();
+                var textContents = te.Extract(Path.Combine(sourcePath, pdfFilename));
+
+                Assert.IsNotNull(textContents);
+
+                var pe = new PageFormatter() { OriginalText = textContents.Text };
+
+                var correctedText = pe.FixCommonOCRErrors();
+
+                Assert.IsFalse(correctedText.Contains(" fed "));
+
+                File.WriteAllText(Path.Combine(outDirectory, outFilename), correctedText);
+            }
+        }
+
         [TestMethod]
         [Ignore]
         public void TestTranslateText()
@@ -28,10 +55,10 @@ namespace PdfReader.Tests
                 {
                     if (page.Length > 0)
                     {
-                        var response = client.TranslateText(page, "en");
-                        translatedText.Add(response.TranslatedText);
-                        System.IO.File.WriteAllText("de_emendatione_temporum_translated_" + pageNumber, response.TranslatedText);
-                        System.Threading.Thread.Sleep(3000);
+                        //var response = client.TranslateText(page, "en");
+                        //translatedText.Add(response.TranslatedText);
+                        //System.IO.File.WriteAllText("de_emendatione_temporum_translated_" + pageNumber, response.TranslatedText);
+                        //System.Threading.Thread.Sleep(3000);
                     }
                 }
                 catch (Exception)
@@ -88,10 +115,10 @@ namespace PdfReader.Tests
                 {
                     if (page.Length > 0)
                     {
-                        var response = client.TranslateText(page.Replace("fign","sign").Replace("ff", "ss").Replace("bf", "bs").Replace("fs", "ss").Replace("fc", "sc").Replace("ft", "st").Replace("fol", "sol"), "en");
-                        translatedText.Add(response.TranslatedText);
-                        System.IO.File.WriteAllText("Translation\\de_emendatione_temporum_translated_" + i, response.TranslatedText);
-                        System.Threading.Thread.Sleep(5000);
+                        //var response = client.TranslateText(page.Replace("fign","sign").Replace("ff", "ss").Replace("bf", "bs").Replace("fs", "ss").Replace("fc", "sc").Replace("ft", "st").Replace("fol", "sol"), "en");
+                        //translatedText.Add(response.TranslatedText);
+                        //System.IO.File.WriteAllText("Translation\\de_emendatione_temporum_translated_" + i, response.TranslatedText);
+                        //System.Threading.Thread.Sleep(5000);
                     }
                 }
                 catch (Exception)

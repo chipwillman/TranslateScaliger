@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfReader.Tests", "PdfReader.Tests\PdfReader.Tests.csproj", "{44461DAF-4131-4914-9207-6FBBEE7136CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageExtractor.Tests", "PageExtractor.Tests\PageExtractor.Tests.csproj", "{58ABB159-4769-4E4A-A95F-D83AAF810227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageExtractor", "PageExtractor\PageExtractor.csproj", "{18A8608C-78E3-4F97-B13B-14077DD17FAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{44461DAF-4131-4914-9207-6FBBEE7136CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44461DAF-4131-4914-9207-6FBBEE7136CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44461DAF-4131-4914-9207-6FBBEE7136CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58ABB159-4769-4E4A-A95F-D83AAF810227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58ABB159-4769-4E4A-A95F-D83AAF810227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58ABB159-4769-4E4A-A95F-D83AAF810227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58ABB159-4769-4E4A-A95F-D83AAF810227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A8608C-78E3-4F97-B13B-14077DD17FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A8608C-78E3-4F97-B13B-14077DD17FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A8608C-78E3-4F97-B13B-14077DD17FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A8608C-78E3-4F97-B13B-14077DD17FAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
