@@ -15,13 +15,13 @@ namespace PdfReader.Tests
         [TestMethod]
         public void TestExtractTextAndWash()
         {
-            var pageNumber = 14;
-            for (int i = pageNumber; i < 970; i++)
+            var pageNumber = 56;
+            for (int i = pageNumber; i <= 970; i++)
             {
                 var sourcePath = @"c:\code\PdfTranslator\Solution1\PageExtractor.Tests\bin\Debug\Extracted\";
                 var pdfFilename = "Page" + i + "_Iosephi_Scaligeri_Opus_de_emendatione_te.pdf";
                 var outFilename = "Page" + i.ToString("00#") + "_cleanedText_Iosephi_Scaligeri_Opus_de_emendatione_te.txt";
-                var outDirectory = @"c:\code\PdfTranslator\Solution1\Output\Latin";
+                var outDirectory = @"c:\code\PdfTranslator\Solution1\Output\Latin\Raw\";
                 var te = new TextExtractor();
                 var textContents = te.Extract(Path.Combine(sourcePath, pdfFilename));
 
