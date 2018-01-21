@@ -15,7 +15,7 @@ namespace PdfReader.Tests
         [TestMethod]
         public void TestExtractTextAndWash()
         {
-            var pageNumber = 56;
+            var pageNumber = 89;
             for (int i = pageNumber; i <= 970; i++)
             {
                 var sourcePath = @"c:\code\PdfTranslator\Solution1\PageExtractor.Tests\bin\Debug\Extracted\";
