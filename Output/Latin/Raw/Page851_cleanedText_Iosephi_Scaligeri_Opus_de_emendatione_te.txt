@@ -47,13 +47,13 @@ uc 3.4.
 
 ID E R E G v L A R I B V S D I E R V M.
 
-C Is! T i A L E s literae menfium, id est, quantitas earum, fi per nu
+C Is! T i A L E s literae menfium, id est, quantitas earum, si per nu
 
 meros exprimantur , vnitate au&ae dant regulares illarum Kalen.
 
 darum , quarum initiales funt. Verbi gratia : Kalendarum Mar
 
-tiarum initialis litera est D, quæ fi per numeros exprimatur,funt qua
+tiarum initialis litera est D, quæ si per numeros exprimatur,funt qua
 
 tuor , quia ea est quarta ab A. Addita vnitate, quinque erunt regu
 
@@ -73,7 +73,7 @@ Nam •aecri est Ianuarius incipiens ab A. Danubium est Februarius
 
 incipiens a D. Sic deinceps. Adeptus Regulares Kalendarum, fcics
 
-& reliquorum dierum. Nam fi Kalendarum Martiarum regulares
+& reliquorum dierum. Nam si Kalendarum Martiarum regulares
 
 funtquinque, fecundæ Martijfunt fex, tertiae feptem,& fic deinceps,
 
